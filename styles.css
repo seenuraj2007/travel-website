@@ -15,6 +15,7 @@
     --light-bg: #f9fafb;
     --dark-color: #1f2937;
     --text-muted: #6b7280;
+    --text-muted-light: #9ca3af;
     --border-color: #e5e7eb;
     --white: #ffffff;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -23,6 +24,7 @@
     --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
     --border-radius: 12px;
     --transition: all 0.3s ease;
+    --transition-fast: all 0.15s ease;
 }
 
 * {
@@ -41,11 +43,25 @@ body {
     color: var(--dark-color);
     background-color: var(--white);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
+    line-height: 1.3;
     font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 /* ============================================
@@ -56,8 +72,9 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--white) !important;
     border-bottom: 1px solid var(--border-color);
     transition: var(--transition);
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     box-shadow: var(--shadow-sm);
+    z-index: 1030;
 }
 
 .navbar-brand {
@@ -87,6 +104,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color) !important;
 }
 
+.nav-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
 .nav-link::after {
     content: '';
     position: absolute;
@@ -112,7 +135,10 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, var(--light-bg) 0%, rgba(99, 102, 241, 0.05) 100%);
     position: relative;
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 3rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-content {
@@ -131,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
 }
 
 .hero-section .lead {
@@ -149,26 +176,93 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-gradient {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     color: var(--white) !important;
     border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    transition: left 0.3s ease;
+    -webkit-transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-gradient:hover::before {
+    left: 0;
 }
 
 .btn-gradient:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
     color: var(--white) !important;
+}
+
+.btn-gradient:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.btn-gradient:focus {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 2px;
 }
 
 .btn-outline-primary {
     color: var(--primary-color) !important;
     border: 2px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn-outline-primary:hover::before {
+    width: 100%;
 }
 
 .btn-outline-primary:hover {
     background-color: var(--primary-color);
     color: var(--white) !important;
     border-color: var(--primary-color);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-outline-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+}
+
+.btn-outline-primary:focus {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 2px;
 }
 
 .stats {
@@ -254,6 +348,9 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .feature-card::before {
@@ -270,9 +367,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.05) rotate(5deg);
 }
 
 .feature-card:hover::before {
@@ -308,10 +409,6 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, var(--warning-color), #d97706);
 }
 
-.feature-card:hover .feature-icon {
-    transform: scale(1.1) rotate(10deg);
-}
-
 /* ============================================
    Programs/Courses Section
    ============================================ */
@@ -334,12 +431,19 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     height: 100%;
     position: relative;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .course-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
+}
+
+.course-card:hover .course-image {
+    transform: scale(1.05);
 }
 
 .course-image-wrapper {
@@ -353,10 +457,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
-}
-
-.course-card:hover .course-image {
-    transform: scale(1.08);
 }
 
 .course-badge {
@@ -484,6 +584,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-card:hover .team-image {
     transform: scale(1.05);
+}
+
+.team-card:hover .team-content {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
 }
 
 .team-overlay {
@@ -691,7 +796,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .newsletter-section .text-muted {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .newsletter-form {
@@ -708,10 +813,19 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     padding: 0.875rem 1.5rem;
     font-size: 1rem;
+    background: var(--white);
+    color: var(--dark-color);
+    transition: var(--transition);
 }
 
 .newsletter-form .form-control::placeholder {
-    color: var(--text-muted);
+    color: #9ca3af;
+}
+
+.newsletter-form .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .newsletter-form .btn {
@@ -719,6 +833,21 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     border: none;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-form .btn:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.3);
+    outline-offset: 2px;
+}
+
+.newsletter-form .btn:active {
+    transform: translateY(0);
 }
 
 /* ============================================
@@ -860,40 +989,186 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 575.98px) {
     .hero-section {
         padding: 2rem 0;
+        min-height: 90vh;
+        text-align: center;
     }
 
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
     }
 
     .hero-section .lead {
         font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    .hero-section .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .hero-section .d-flex {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .stats {
         gap: 1.5rem;
         flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2rem;
     }
 
     .stat-item {
         flex: 0 1 calc(50% - 0.75rem);
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
     }
 
     .navbar-nav {
         gap: 0.5rem;
+        margin-top: 1rem;
     }
 
     .nav-link {
         padding: 0.5rem 0 !important;
         margin: 0 !important;
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .navbar-collapse {
+        background: var(--white);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        box-shadow: var(--shadow-lg);
     }
 
     .newsletter-section .row {
         gap: 2rem;
+        text-align: center;
     }
 
     .newsletter-form {
         margin-top: 1rem;
+    }
+
+    .newsletter-form .input-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .newsletter-form .form-control,
+    .newsletter-form .btn {
+        width: 100%;
+        border-radius: var(--border-radius) !important;
+    }
+
+    .feature-card,
+    .course-card,
+    .team-card,
+    .testimonial-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .course-image-wrapper {
+        height: 180px;
+    }
+
+    .team-image-wrapper {
+        height: 250px;
+    }
+
+    .py-md-6 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .display-4 {
+        font-size: 2rem !important;
+    }
+
+    .accordion-button {
+        font-size: 1rem;
+        padding: 1.25rem 1rem;
+    }
+
+    .accordion-body {
+        padding: 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-section h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .hero-section .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .stats {
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .feature-card,
+    .course-card,
+    .team-card,
+    .testimonial-card {
+        margin-bottom: 2rem;
+    }
+
+    .py-md-6 {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+
+    .display-4 {
+        font-size: 2.5rem !important;
+    }
+
+    .course-image-wrapper {
+        height: 200px;
+    }
+
+    .team-image-wrapper {
+        height: 280px;
+    }
+
+    .newsletter-form .input-group {
+        flex-direction: row;
+    }
+
+    .newsletter-form .form-control {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+    .newsletter-form .btn {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        white-space: nowrap;
     }
 }
 
@@ -906,6 +1181,35 @@ h1, h2, h3, h4, h5, h6 {
     .min-vh-100 {
         min-height: 100vh;
     }
+
+    .hero-section h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .hero-section .btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    .display-4 {
+        font-size: 3rem !important;
+    }
+
+    .course-image-wrapper {
+        height: 220px;
+    }
+
+    .team-image-wrapper {
+        height: 300px;
+    }
+
+    .stats {
+        gap: 3rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -915,6 +1219,36 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-link {
         margin: 0 0.5rem;
+    }
+
+    .hero-section {
+        padding: 4rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(3rem, 4vw, 4.5rem);
+    }
+
+    .course-image-wrapper {
+        height: 240px;
+    }
+
+    .team-image-wrapper {
+        height: 320px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero-section h1 {
+        font-size: 4.5rem;
+    }
+
+    .stat-number {
+        font-size: 2.25rem;
     }
 }
 
