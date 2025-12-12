@@ -79,19 +79,28 @@ function updateActiveNavLink() {
 function initializeScrollAnimation() {
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -50px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeIn 0.6s ease-out forwards';
+                // Add stagger effect based on element index
+                const elements = document.querySelectorAll('.feature-card, .course-card, .team-card, .testimonial-card');
+                const index = Array.from(elements).indexOf(entry.target);
+                const delay = index * 100; // 100ms delay between elements
+                
+                entry.target.style.animation = `fadeIn 0.6s ease-out ${delay}ms both`;
+                entry.target.style.opacity = '1';
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
-    document.querySelectorAll('.feature-card, .course-card, .team-card, .testimonial-card').forEach(el => {
+    // Initialize elements with opacity 0 for fade-in effect
+    const animatedElements = document.querySelectorAll('.feature-card, .course-card, .team-card, .testimonial-card');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
         observer.observe(el);
     });
 }
