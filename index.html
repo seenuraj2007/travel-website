@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduLearn - Premium Online Education Platform</title>
+    <title>Edison - Online Education Platform</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,10 +16,10 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand fw-bold text-primary" href="#home">
-                <i class="bi bi-book-half"></i> EduLearn
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-lightning-charge-fill"></i> Edison
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,16 +31,19 @@
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#courses">Courses</a>
+                        <a class="nav-link" href="#programs">Programs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                        <a class="nav-link" href="#team">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#testimonials">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
                     </li>
                 </ul>
             </div>
@@ -48,30 +51,47 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section py-5 py-md-6">
+    <section id="home" class="hero-section">
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h1 class="display-4 fw-bold mb-4 text-dark">
-                        Unlock Your <span class="text-primary">Learning</span> Potential
-                    </h1>
-                    <p class="lead text-muted mb-4">
-                        Join thousands of students worldwide and transform your career through our comprehensive online courses. 
-                        Expert instructors, flexible scheduling, and lifetime access to course materials.
-                    </p>
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="#courses" class="btn btn-primary btn-lg">
-                            Explore Courses
-                        </a>
-                        <a href="#contact" class="btn btn-outline-primary btn-lg">
-                            Learn More
-                        </a>
+                    <div class="hero-content">
+                        <h1 class="display-3 fw-bold mb-4">
+                            Master Your <span class="gradient-text">Skills Online</span>
+                        </h1>
+                        <p class="lead text-muted mb-4">
+                            Learn from industry experts. Build real projects. Advance your career. Join thousands of students already transforming their futures with Edison's world-class courses.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#programs" class="btn btn-lg btn-gradient">
+                                Explore Courses
+                            </a>
+                            <a href="#newsletter" class="btn btn-lg btn-outline-primary">
+                                Learn More
+                            </a>
+                        </div>
+                        <div class="stats mt-5">
+                            <div class="stat-item">
+                                <h3 class="stat-number">50K+</h3>
+                                <p class="stat-label">Active Students</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-number">200+</h3>
+                                <p class="stat-label">Courses</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-number">4.9★</h3>
+                                <p class="stat-label">Average Rating</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-wrapper">
+                        <div class="hero-shape hero-shape-1"></div>
+                        <div class="hero-shape hero-shape-2"></div>
                         <img src="https://images.unsplash.com/photo-1516321318423-f06f70674e90?w=600&q=80" 
-                             alt="Students learning online" class="img-fluid rounded-lg shadow-lg">
+                             alt="Students learning online" class="img-fluid hero-image">
                     </div>
                 </div>
             </div>
@@ -79,99 +99,97 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features-section py-5 py-md-6 bg-light">
+    <section id="features" class="features-section py-5 py-md-6">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3">Why Choose EduLearn?</h2>
-                <p class="lead text-muted">Discover the benefits that set us apart from other platforms</p>
+                <h2 class="display-4 fw-bold mb-3">Why Choose Edison?</h2>
+                <p class="lead text-muted">Everything you need to learn, grow, and succeed</p>
             </div>
             
             <div class="row g-4">
                 <!-- Feature 1 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="feature-card h-100 p-4 rounded-lg shadow-sm">
-                        <div class="feature-icon mb-3">
-                            <i class="bi bi-person-check-fill text-primary"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon bg-gradient-primary">
+                            <i class="bi bi-award-fill"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Expert Instructors</h5>
-                        <p class="text-muted">Learn from industry professionals with years of experience and proven track records.</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+                        <h5 class="fw-bold mt-3 mb-3">Expert Instruction</h5>
+                        <p class="text-muted">Learn from industry leaders with decades of real-world experience.</p>
                     </div>
                 </div>
 
                 <!-- Feature 2 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="feature-card h-100 p-4 rounded-lg shadow-sm">
-                        <div class="feature-icon mb-3">
-                            <i class="bi bi-clock-history text-success"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon bg-gradient-success">
+                            <i class="bi bi-hourglass-split"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Flexible Schedule</h5>
-                        <p class="text-muted">Study at your own pace. Access course materials anytime, anywhere on any device.</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+                        <h5 class="fw-bold mt-3 mb-3">Learn at Your Pace</h5>
+                        <p class="text-muted">Flexible schedules that work with your lifestyle and commitments.</p>
                     </div>
                 </div>
 
                 <!-- Feature 3 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="feature-card h-100 p-4 rounded-lg shadow-sm">
-                        <div class="feature-icon mb-3">
-                            <i class="bi bi-award-fill text-warning"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon bg-gradient-info">
+                            <i class="bi bi-certificate"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Certification</h5>
-                        <p class="text-muted">Earn recognized certificates upon completion to boost your professional profile.</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+                        <h5 class="fw-bold mt-3 mb-3">Certifications</h5>
+                        <p class="text-muted">Earn recognized certificates to showcase your achievements.</p>
                     </div>
                 </div>
 
                 <!-- Feature 4 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="feature-card h-100 p-4 rounded-lg shadow-sm">
-                        <div class="feature-icon mb-3">
-                            <i class="bi bi-chat-left-quote-fill text-info"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon bg-gradient-warning">
+                            <i class="bi bi-chat-dots-fill"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">24/7 Support</h5>
-                        <p class="text-muted">Get help when you need it. Our dedicated support team is always ready to assist.</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+                        <h5 class="fw-bold mt-3 mb-3">24/7 Support</h5>
+                        <p class="text-muted">Get help when you need it from our dedicated support team.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Courses Section -->
-    <section id="courses" class="courses-section py-5 py-md-6">
+    <!-- Programs/Courses Section -->
+    <section id="programs" class="programs-section py-5 py-md-6 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3">Popular Courses</h2>
-                <p class="lead text-muted">Choose from our wide range of professionally designed courses</p>
+                <h2 class="display-4 fw-bold mb-3">Popular Courses</h2>
+                <p class="lead text-muted">Choose from our carefully curated selection of professional courses</p>
             </div>
 
             <div class="row g-4">
                 <!-- Course 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="course-card card h-100 shadow-sm border-0 course-hover">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" 
-                             class="card-img-top course-img" alt="Web Development">
-                        <div class="card-body d-flex flex-column">
-                            <div class="mb-3">
-                                <span class="badge bg-primary mb-2">Popular</span>
-                                <h5 class="card-title fw-bold">Web Development Fundamentals</h5>
-                            </div>
-                            <p class="card-text text-muted flex-grow-1">
-                                Master HTML, CSS, JavaScript, and modern web frameworks. Build responsive, interactive websites from scratch.
-                            </p>
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="https://i.pravatar.cc/32?img=1" alt="Instructor" class="rounded-circle">
-                                    <small class="text-muted">Sarah Johnson</small>
+                    <div class="course-card">
+                        <div class="course-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" 
+                                 alt="Web Development" class="course-image">
+                            <div class="course-badge">Featured</div>
+                        </div>
+                        <div class="course-content">
+                            <h5 class="fw-bold mb-2">Web Development Masterclass</h5>
+                            <p class="text-muted small mb-3">Master HTML, CSS, JavaScript, React, and build production-ready web applications.</p>
+                            <div class="course-meta mb-3">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="https://i.pravatar.cc/32?img=1" alt="Instructor" class="instructor-avatar">
+                                    <div class="small">
+                                        <div class="fw-bold">Sarah Johnson</div>
+                                        <div class="text-muted">Expert Instructor</div>
+                                    </div>
                                 </div>
-                                <small class="text-warning">
-                                    <i class="bi bi-star-fill"></i> 4.8 (320)
-                                </small>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="rating"><i class="bi bi-star-fill text-warning"></i> 4.8 (320)</span>
+                                    <span class="text-muted">12 weeks</span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 mb-0 text-primary">$49.99</span>
-                                <button class="btn btn-primary btn-sm">Enroll Now</button>
+                            <div class="course-footer d-flex justify-content-between align-items-center">
+                                <span class="course-price">$199</span>
+                                <button class="btn btn-sm btn-gradient course-btn">Enroll</button>
                             </div>
                         </div>
                     </div>
@@ -179,29 +197,31 @@
 
                 <!-- Course 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="course-card card h-100 shadow-sm border-0 course-hover">
-                        <img src="https://images.unsplash.com/photo-1518611505867-48e555cc338d?w=400&q=80" 
-                             class="card-img-top course-img" alt="Data Science">
-                        <div class="card-body d-flex flex-column">
-                            <div class="mb-3">
-                                <span class="badge bg-success mb-2">New</span>
-                                <h5 class="card-title fw-bold">Data Science Bootcamp</h5>
-                            </div>
-                            <p class="card-text text-muted flex-grow-1">
-                                Learn Python, pandas, machine learning, and data visualization. Analyze real-world datasets and build predictive models.
-                            </p>
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="https://i.pravatar.cc/32?img=2" alt="Instructor" class="rounded-circle">
-                                    <small class="text-muted">Michael Chen</small>
+                    <div class="course-card">
+                        <div class="course-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1518611505867-48e555cc338d?w=400&q=80" 
+                                 alt="Data Science" class="course-image">
+                            <div class="course-badge badge-new">New</div>
+                        </div>
+                        <div class="course-content">
+                            <h5 class="fw-bold mb-2">Data Science & ML Bootcamp</h5>
+                            <p class="text-muted small mb-3">Learn Python, pandas, machine learning, statistics, and build AI models.</p>
+                            <div class="course-meta mb-3">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="https://i.pravatar.cc/32?img=2" alt="Instructor" class="instructor-avatar">
+                                    <div class="small">
+                                        <div class="fw-bold">Michael Chen</div>
+                                        <div class="text-muted">Data Expert</div>
+                                    </div>
                                 </div>
-                                <small class="text-warning">
-                                    <i class="bi bi-star-fill"></i> 4.9 (285)
-                                </small>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="rating"><i class="bi bi-star-fill text-warning"></i> 4.9 (285)</span>
+                                    <span class="text-muted">14 weeks</span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 mb-0 text-primary">$79.99</span>
-                                <button class="btn btn-primary btn-sm">Enroll Now</button>
+                            <div class="course-footer d-flex justify-content-between align-items-center">
+                                <span class="course-price">$249</span>
+                                <button class="btn btn-sm btn-gradient course-btn">Enroll</button>
                             </div>
                         </div>
                     </div>
@@ -209,29 +229,31 @@
 
                 <!-- Course 3 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="course-card card h-100 shadow-sm border-0 course-hover">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" 
-                             class="card-img-top course-img" alt="UI/UX Design">
-                        <div class="card-body d-flex flex-column">
-                            <div class="mb-3">
-                                <span class="badge bg-warning text-dark mb-2">Trending</span>
-                                <h5 class="card-title fw-bold">UI/UX Design Mastery</h5>
-                            </div>
-                            <p class="card-text text-muted flex-grow-1">
-                                Learn design principles, Figma, prototyping, and user research. Create stunning digital experiences.
-                            </p>
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="https://i.pravatar.cc/32?img=3" alt="Instructor" class="rounded-circle">
-                                    <small class="text-muted">Emma Rodriguez</small>
+                    <div class="course-card">
+                        <div class="course-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=80" 
+                                 alt="UI/UX Design" class="course-image">
+                            <div class="course-badge badge-hot">Hot</div>
+                        </div>
+                        <div class="course-content">
+                            <h5 class="fw-bold mb-2">UI/UX Design Essentials</h5>
+                            <p class="text-muted small mb-3">Master design thinking, Figma, prototyping, and user research techniques.</p>
+                            <div class="course-meta mb-3">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="https://i.pravatar.cc/32?img=3" alt="Instructor" class="instructor-avatar">
+                                    <div class="small">
+                                        <div class="fw-bold">Emma Rodriguez</div>
+                                        <div class="text-muted">Design Lead</div>
+                                    </div>
                                 </div>
-                                <small class="text-warning">
-                                    <i class="bi bi-star-fill"></i> 4.7 (198)
-                                </small>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="rating"><i class="bi bi-star-fill text-warning"></i> 4.7 (198)</span>
+                                    <span class="text-muted">10 weeks</span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 mb-0 text-primary">$59.99</span>
-                                <button class="btn btn-primary btn-sm">Enroll Now</button>
+                            <div class="course-footer d-flex justify-content-between align-items-center">
+                                <span class="course-price">$179</span>
+                                <button class="btn btn-sm btn-gradient course-btn">Enroll</button>
                             </div>
                         </div>
                     </div>
@@ -239,29 +261,31 @@
 
                 <!-- Course 4 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="course-card card h-100 shadow-sm border-0 course-hover">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324ef6cb?w=400&q=80" 
-                             class="card-img-top course-img" alt="Mobile Development">
-                        <div class="card-body d-flex flex-column">
-                            <div class="mb-3">
-                                <span class="badge bg-info mb-2">Featured</span>
-                                <h5 class="card-title fw-bold">Mobile App Development</h5>
-                            </div>
-                            <p class="card-text text-muted flex-grow-1">
-                                Build iOS and Android apps with React Native. Learn responsive design and mobile best practices.
-                            </p>
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="https://i.pravatar.cc/32?img=4" alt="Instructor" class="rounded-circle">
-                                    <small class="text-muted">James Wilson</small>
+                    <div class="course-card">
+                        <div class="course-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324ef6cb?w=400&q=80" 
+                                 alt="Mobile Development" class="course-image">
+                            <div class="course-badge">Trending</div>
+                        </div>
+                        <div class="course-content">
+                            <h5 class="fw-bold mb-2">Mobile App Development</h5>
+                            <p class="text-muted small mb-3">Build iOS and Android apps with React Native, Kotlin, and Swift.</p>
+                            <div class="course-meta mb-3">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="https://i.pravatar.cc/32?img=4" alt="Instructor" class="instructor-avatar">
+                                    <div class="small">
+                                        <div class="fw-bold">James Wilson</div>
+                                        <div class="text-muted">Mobile Expert</div>
+                                    </div>
                                 </div>
-                                <small class="text-warning">
-                                    <i class="bi bi-star-fill"></i> 4.6 (256)
-                                </small>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="rating"><i class="bi bi-star-fill text-warning"></i> 4.6 (256)</span>
+                                    <span class="text-muted">11 weeks</span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 mb-0 text-primary">$69.99</span>
-                                <button class="btn btn-primary btn-sm">Enroll Now</button>
+                            <div class="course-footer d-flex justify-content-between align-items-center">
+                                <span class="course-price">$219</span>
+                                <button class="btn btn-sm btn-gradient course-btn">Enroll</button>
                             </div>
                         </div>
                     </div>
@@ -269,29 +293,30 @@
 
                 <!-- Course 5 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="course-card card h-100 shadow-sm border-0 course-hover">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80" 
-                             class="card-img-top course-img" alt="Digital Marketing">
-                        <div class="card-body d-flex flex-column">
-                            <div class="mb-3">
-                                <span class="badge bg-danger mb-2">Hot</span>
-                                <h5 class="card-title fw-bold">Digital Marketing Mastery</h5>
-                            </div>
-                            <p class="card-text text-muted flex-grow-1">
-                                Master SEO, social media, content marketing, and analytics. Launch successful digital campaigns.
-                            </p>
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="https://i.pravatar.cc/32?img=5" alt="Instructor" class="rounded-circle">
-                                    <small class="text-muted">Lisa Anderson</small>
+                    <div class="course-card">
+                        <div class="course-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80" 
+                                 alt="Digital Marketing" class="course-image">
+                        </div>
+                        <div class="course-content">
+                            <h5 class="fw-bold mb-2">Digital Marketing Mastery</h5>
+                            <p class="text-muted small mb-3">Master SEO, social media marketing, content strategy, and analytics.</p>
+                            <div class="course-meta mb-3">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="https://i.pravatar.cc/32?img=5" alt="Instructor" class="instructor-avatar">
+                                    <div class="small">
+                                        <div class="fw-bold">Lisa Anderson</div>
+                                        <div class="text-muted">Marketing Pro</div>
+                                    </div>
                                 </div>
-                                <small class="text-warning">
-                                    <i class="bi bi-star-fill"></i> 4.8 (312)
-                                </small>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="rating"><i class="bi bi-star-fill text-warning"></i> 4.8 (312)</span>
+                                    <span class="text-muted">8 weeks</span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 mb-0 text-primary">$44.99</span>
-                                <button class="btn btn-primary btn-sm">Enroll Now</button>
+                            <div class="course-footer d-flex justify-content-between align-items-center">
+                                <span class="course-price">$149</span>
+                                <button class="btn btn-sm btn-gradient course-btn">Enroll</button>
                             </div>
                         </div>
                     </div>
@@ -299,29 +324,30 @@
 
                 <!-- Course 6 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="course-card card h-100 shadow-sm border-0 course-hover">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" 
-                             class="card-img-top course-img" alt="Cloud Computing">
-                        <div class="card-body d-flex flex-column">
-                            <div class="mb-3">
-                                <span class="badge bg-secondary mb-2">Advanced</span>
-                                <h5 class="card-title fw-bold">Cloud Computing Essentials</h5>
-                            </div>
-                            <p class="card-text text-muted flex-grow-1">
-                                Learn AWS, Azure, Docker, and Kubernetes. Deploy and manage cloud infrastructure like a professional.
-                            </p>
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="https://i.pravatar.cc/32?img=6" alt="Instructor" class="rounded-circle">
-                                    <small class="text-muted">David Kumar</small>
+                    <div class="course-card">
+                        <div class="course-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" 
+                                 alt="Cloud Computing" class="course-image">
+                        </div>
+                        <div class="course-content">
+                            <h5 class="fw-bold mb-2">Cloud Computing Essentials</h5>
+                            <p class="text-muted small mb-3">Learn AWS, Azure, Google Cloud, Docker, Kubernetes deployment.</p>
+                            <div class="course-meta mb-3">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="https://i.pravatar.cc/32?img=6" alt="Instructor" class="instructor-avatar">
+                                    <div class="small">
+                                        <div class="fw-bold">David Kumar</div>
+                                        <div class="text-muted">Cloud Architect</div>
+                                    </div>
                                 </div>
-                                <small class="text-warning">
-                                    <i class="bi bi-star-fill"></i> 4.9 (201)
-                                </small>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="rating"><i class="bi bi-star-fill text-warning"></i> 4.9 (201)</span>
+                                    <span class="text-muted">13 weeks</span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 mb-0 text-primary">$89.99</span>
-                                <button class="btn btn-primary btn-sm">Enroll Now</button>
+                            <div class="course-footer d-flex justify-content-between align-items-center">
+                                <span class="course-price">$229</span>
+                                <button class="btn btn-sm btn-gradient course-btn">Enroll</button>
                             </div>
                         </div>
                     </div>
@@ -329,7 +355,103 @@
             </div>
 
             <div class="text-center mt-5">
-                <a href="#" class="btn btn-lg btn-outline-primary">View All Courses</a>
+                <a href="#" class="btn btn-lg btn-outline-primary">Browse All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section py-5 py-md-6">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Meet Our Instructors</h2>
+                <p class="lead text-muted">World-class educators dedicated to your success</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Team Member 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-image-wrapper">
+                            <img src="https://i.pravatar.cc/300?img=1" alt="Sarah Johnson" class="team-image">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content text-center">
+                            <h5 class="fw-bold mt-3">Sarah Johnson</h5>
+                            <p class="text-primary mb-2">Web Development Expert</p>
+                            <p class="text-muted small">15+ years of experience in full-stack development and mentoring.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-image-wrapper">
+                            <img src="https://i.pravatar.cc/300?img=2" alt="Michael Chen" class="team-image">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content text-center">
+                            <h5 class="fw-bold mt-3">Michael Chen</h5>
+                            <p class="text-primary mb-2">Data Science Lead</p>
+                            <p class="text-muted small">PhD in Machine Learning, worked at leading tech companies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-image-wrapper">
+                            <img src="https://i.pravatar.cc/300?img=3" alt="Emma Rodriguez" class="team-image">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content text-center">
+                            <h5 class="fw-bold mt-3">Emma Rodriguez</h5>
+                            <p class="text-primary mb-2">Design Director</p>
+                            <p class="text-muted small">Award-winning designer with 12 years in UX/UI industry.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-image-wrapper">
+                            <img src="https://i.pravatar.cc/300?img=4" alt="James Wilson" class="team-image">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content text-center">
+                            <h5 class="fw-bold mt-3">James Wilson</h5>
+                            <p class="text-primary mb-2">Mobile Developer</p>
+                            <p class="text-muted small">Expert in iOS and Android development with 50+ app launches.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -338,30 +460,31 @@
     <section id="testimonials" class="testimonials-section py-5 py-md-6 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3">What Our Students Say</h2>
-                <p class="lead text-muted">Real stories from learners who transformed their careers</p>
+                <h2 class="display-4 fw-bold mb-3">Student Success Stories</h2>
+                <p class="lead text-muted">Real feedback from students who transformed their careers</p>
             </div>
 
             <div class="row g-4">
                 <!-- Testimonial 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="testimonial-card card h-100 shadow-sm border-0 p-4">
-                        <div class="mb-3">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="rating mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Edison's courses are top-notch! The instructors are incredibly knowledgeable and responsive. I landed my dream job at a FAANG company within 3 months of completing the bootcamp."
+                            </p>
                         </div>
-                        <p class="card-text text-muted mb-4">
-                            "EduLearn transformed my career! The instructors are incredibly knowledgeable and the course materials are world-class. 
-                            I landed my dream job within 3 months of completing the bootcamp."
-                        </p>
-                        <div class="d-flex align-items-center">
-                            <img src="https://i.pravatar.cc/40?img=10" alt="Student" class="rounded-circle me-3">
+                        <div class="testimonial-author d-flex align-items-center mt-4">
+                            <img src="https://i.pravatar.cc/48?img=10" alt="Jessica" class="author-avatar me-3">
                             <div>
                                 <h6 class="fw-bold mb-0">Jessica Matthews</h6>
-                                <small class="text-muted">Software Developer</small>
+                                <small class="text-muted">Software Engineer</small>
                             </div>
                         </div>
                     </div>
@@ -369,20 +492,21 @@
 
                 <!-- Testimonial 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="testimonial-card card h-100 shadow-sm border-0 p-4">
-                        <div class="mb-3">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="rating mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "The flexibility to learn at my own pace was perfect for me. The UI/UX course helped me transition into a creative role. Highly recommend Edison to anyone serious about upskilling!"
+                            </p>
                         </div>
-                        <p class="card-text text-muted mb-4">
-                            "The flexibility to learn at my own pace was exactly what I needed. The UI/UX design course helped me transition into 
-                            a creative field. Highly recommended for anyone looking to upskill!"
-                        </p>
-                        <div class="d-flex align-items-center">
-                            <img src="https://i.pravatar.cc/40?img=11" alt="Student" class="rounded-circle me-3">
+                        <div class="testimonial-author d-flex align-items-center mt-4">
+                            <img src="https://i.pravatar.cc/48?img=11" alt="Marcus" class="author-avatar me-3">
                             <div>
                                 <h6 class="fw-bold mb-0">Marcus Thompson</h6>
                                 <small class="text-muted">UX Designer</small>
@@ -393,20 +517,21 @@
 
                 <!-- Testimonial 3 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="testimonial-card card h-100 shadow-sm border-0 p-4">
-                        <div class="mb-3">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="rating mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Outstanding quality content and supportive community. The instructors genuinely care about your learning journey. Best investment I've made in my career. Worth every penny!"
+                            </p>
                         </div>
-                        <p class="card-text text-muted mb-4">
-                            "Outstanding quality content and supportive community. The instructors genuinely care about your learning journey. 
-                            Worth every penny!"
-                        </p>
-                        <div class="d-flex align-items-center">
-                            <img src="https://i.pravatar.cc/40?img=12" alt="Student" class="rounded-circle me-3">
+                        <div class="testimonial-author d-flex align-items-center mt-4">
+                            <img src="https://i.pravatar.cc/48?img=12" alt="Priya" class="author-avatar me-3">
                             <div>
                                 <h6 class="fw-bold mb-0">Priya Patel</h6>
                                 <small class="text-muted">Data Analyst</small>
@@ -418,40 +543,146 @@
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section py-5 py-md-6 bg-primary text-white">
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section py-5 py-md-6">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Frequently Asked Questions</h2>
+                <p class="lead text-muted">Find answers to common questions about Edison</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <i class="bi bi-question-circle me-3"></i> What are the prerequisites for the courses?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Most of our beginner courses require no prior knowledge. For advanced courses, we recommend having basic programming knowledge. Each course page clearly lists the prerequisites. We also offer introductory modules to help you get up to speed.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="bi bi-question-circle me-3"></i> How long do I have access to the course materials?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You have lifetime access to all course materials, including video lectures, code repositories, and resources. Even after completing a course, you can revisit the content anytime for reference or refresher learning.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="bi bi-question-circle me-3"></i> Do you offer certificates upon completion?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! Upon successful completion of any course, you'll receive a recognized certificate that you can add to your LinkedIn profile and resume. Our certificates are valued by leading companies in the industry.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="bi bi-question-circle me-3"></i> Can I get a refund if I'm not satisfied?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! We offer a 30-day money-back guarantee. If you're not satisfied with a course for any reason, simply request a refund within 30 days of purchase and we'll process it immediately—no questions asked.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <i class="bi bi-question-circle me-3"></i> How do I get help if I'm stuck?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our support team is available 24/7 through multiple channels: email, live chat, and discussion forums. You can also connect with other students in our active community to share knowledge and solve problems together.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    <i class="bi bi-question-circle me-3"></i> Are there any payment plans available?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! We offer flexible payment plans for courses over $100. You can split the payment into 3 or 6 installments with no interest. Select your preferred plan during checkout for easy budgeting.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter-section py-5 py-md-6">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="display-5 fw-bold mb-3">Ready to Start Your Learning Journey?</h2>
-                    <p class="lead mb-0">
-                        Join thousands of successful students. Enroll today and get 20% off your first course!
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <h2 class="display-4 fw-bold mb-3">Get Updates & Exclusive Offers</h2>
+                    <p class="lead text-muted mb-0">
+                        Subscribe to our newsletter and receive the latest course announcements, exclusive discounts, and learning tips directly in your inbox.
                     </p>
                 </div>
-                <div class="col-lg-4 text-lg-end">
-                    <button class="btn btn-light btn-lg">Get Started Now</button>
+                <div class="col-lg-5">
+                    <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email..." required>
+                            <button class="btn btn-gradient btn-lg" type="submit">Subscribe</button>
+                        </div>
+                        <small class="text-muted d-block mt-2">We respect your privacy. Unsubscribe at any time.</small>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer bg-dark text-light py-5">
+    <footer class="footer py-5">
         <div class="container">
             <div class="row g-4 mb-4">
                 <!-- Company Info -->
                 <div class="col-md-3">
                     <h5 class="fw-bold mb-3">
-                        <i class="bi bi-book-half"></i> EduLearn
+                        <i class="bi bi-lightning-charge-fill"></i> Edison
                     </h5>
-                    <p class="text-muted">
-                        Empowering learners worldwide with quality education and career transformation.
+                    <p class="text-muted small mb-3">
+                        Empowering learners worldwide with world-class education and career transformation.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-light me-3"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
 
@@ -459,10 +690,10 @@
                 <div class="col-md-3">
                     <h6 class="fw-bold mb-3">Quick Links</h6>
                     <ul class="list-unstyled text-muted">
-                        <li class="mb-2"><a href="#home" class="text-muted link-hover">Home</a></li>
-                        <li class="mb-2"><a href="#courses" class="text-muted link-hover">Courses</a></li>
-                        <li class="mb-2"><a href="#features" class="text-muted link-hover">Features</a></li>
-                        <li class="mb-2"><a href="#testimonials" class="text-muted link-hover">Testimonials</a></li>
+                        <li class="mb-2"><a href="#home" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="#programs" class="footer-link">Courses</a></li>
+                        <li class="mb-2"><a href="#team" class="footer-link">Instructors</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="footer-link">Reviews</a></li>
                     </ul>
                 </div>
 
@@ -470,24 +701,24 @@
                 <div class="col-md-3">
                     <h6 class="fw-bold mb-3">Resources</h6>
                     <ul class="list-unstyled text-muted">
-                        <li class="mb-2"><a href="#" class="text-muted link-hover">Blog</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted link-hover">Documentation</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted link-hover">FAQs</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted link-hover">Support</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Documentation</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact Info -->
                 <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">Contact Us</h6>
-                    <p class="text-muted mb-2">
-                        <i class="bi bi-geo-alt"></i> 123 Learning Street, Tech City, TC 12345
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <p class="text-muted small mb-2">
+                        <i class="bi bi-geo-alt"></i> 123 Tech Avenue, San Francisco, CA 94105
                     </p>
-                    <p class="text-muted mb-2">
-                        <i class="bi bi-telephone"></i> <a href="tel:+1234567890" class="text-muted">+1 (234) 567-890</a>
+                    <p class="text-muted small mb-2">
+                        <i class="bi bi-telephone"></i> <a href="tel:+14155551234" class="footer-link">+1 (415) 555-1234</a>
                     </p>
-                    <p class="text-muted">
-                        <i class="bi bi-envelope"></i> <a href="mailto:info@edulearn.com" class="text-muted">info@edulearn.com</a>
+                    <p class="text-muted small">
+                        <i class="bi bi-envelope"></i> <a href="mailto:hello@edison.com" class="footer-link">hello@edison.com</a>
                     </p>
                 </div>
             </div>
@@ -496,14 +727,12 @@
 
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="text-muted mb-0">&copy; 2024 EduLearn. All rights reserved.</p>
+                    <p class="text-muted small mb-0">&copy; 2024 Edison. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <ul class="list-unstyled d-flex gap-3 justify-content-md-end">
-                        <li><a href="#" class="text-muted link-hover">Privacy Policy</a></li>
-                        <li><a href="#" class="text-muted link-hover">Terms of Service</a></li>
-                        <li><a href="#" class="text-muted link-hover">Cookies</a></li>
-                    </ul>
+                    <a href="#" class="footer-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-link me-3">Terms of Service</a>
+                    <a href="#" class="footer-link">Cookie Policy</a>
                 </div>
             </div>
         </div>
@@ -512,7 +741,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JavaScript -->
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
