@@ -1,0 +1,75 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.vim/
+.emacs
+*.sublime-project
+*.sublime-workspace
+.netbeans/
+.buildpath
+.project
+.settings/
+*.sublime-settings
+
+# Node.js & NPM
+node_modules/
+npm-debug.log
+npm-debug.log.*
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+.npm
+.eslintcache
+.node_repl_history
+
+# Build and Distribution
+dist/
+build/
+*.min.js
+*.min.css
+*.bundle.js
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
+.temp/
+tmp/
+
+# Testing
+coverage/
+.nyc_output/
+.mocha-output/
+
+# Dependency Caching
+.pkg/
+
+# OS Generated Files
+Thumbs.db
+.AppleDouble
+.LSOverride
+*.log
+
+# Configuration
+.config/
+config.local.js
